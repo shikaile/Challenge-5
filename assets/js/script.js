@@ -11,3 +11,26 @@
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
 // THEN the saved events persist
+$("#schedule").jqs({
+    mode: "read",
+    days: [
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday",
+"Sunday"
+],
+    hour: 12,
+    data: [
+        {
+            day: 0,
+            periods: [
+                ["10pm", "12am"],
+                ["12am", "2:30am"]
+            ]
+        }
+    ]
+});
+$("#schedule").jqs();
